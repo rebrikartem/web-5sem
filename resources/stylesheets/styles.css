@@ -1,0 +1,98 @@
+html body {
+    background-color: rgb(237, 246, 255);
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    padding-top: 50px;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0 0 35px;
+    font-weight: 700px;
+}
+
+a {
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+
+.menu__item {
+    margin: 0 10px;
+}
+
+.menu__item a {
+    text-transform: uppercase;
+}
+
+#navigation a {
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+}
+
+.overview {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.overview p {
+    font-size: 22px;
+    font-weight: 500;
+    color: black;
+}
+
+.position {
+    font-size: 22px;
+    color: black;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.experience {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+#skills img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+#skills {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+#education {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+#education img {
+    width: 400px;
+    margin: 10px;
+}
+
+#languages {
+
+    padding-bottom: 50px;
+}
+
+#contacts {
+    padding-bottom: 40px;
+}
