@@ -9,63 +9,54 @@
     <link rel="stylesheet" href="resources/stylesheets/styles.css">
     <title>Мое портфолио</title>
 </head>
-<body class="bg-black">
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" id="navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    <a href="#">CV</a>
-                </div>
-                <div class="col-lg-10">
 
-                        <ul class="menu navbar-nav ml-auto">
-                            <li class="menu__item">
-                                <a href="#overview">
-                                    Обзор
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#position">
-                                    Должность
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#experience">
-                                    Опыт
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#skills">
-                                    Навыки
-                                </a>
-                            </li>
-                            <!-- <li class="menu__item">
-                                <a href="#">
-                                    Проекты
-                                </a>
-                            </li> -->
-                            <li class="menu__item">
-                                <a href="#education">
-                                    Образование
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#languages">
-                                    Языки
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#contacts">
-                                    Контакты
-                                </a>
-                            </li>
-                        </ul>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">CV</a>
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#overview">Обзор <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#position">Должность <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#experience">Опыт <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#skills">навыки <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#education">Образование <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#languages">Языки <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#contacts">Контакты <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
                 </div>
+
+
             </div>
-        </div>
-    </nav>
 
-    <header id="overview" class="overview">
+        </nav>
+    </header>
+
+    <section id="overview" class="overview">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center">
@@ -84,7 +75,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <section class="position" id="position">
         <div class="container">
@@ -120,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -136,14 +127,16 @@
                     <h3>Windows</h3>
                     <img src="resources/images/logos/windows.svg" alt="Microsoft Windows logo">
                     <p class="text-justify">
-                        Уверенный пользователь Windows, очень хорошо знаю и понимаю эту систему. Умею писать несложные batch-скрипты.
+                        Уверенный пользователь Windows, очень хорошо знаю и понимаю эту систему. Умею писать несложные
+                        batch-скрипты.
                     </p>
                 </div>
                 <div class="col">
                     <h3>Unix</h3>
                     <img src="resources/images/logos/linux.png" alt="Linux OS mascot">
                     <p class="text-justify">
-                        Имею базовые навыки работы с Unix-системами через терминал (ssh, scp, управление файловой системой через терминал,
+                        Имею базовые навыки работы с Unix-системами через терминал (ssh, scp, управление файловой
+                        системой через терминал,
                         переменные окружения, простые bash-скрипты).
                     </p>
                 </div>
@@ -151,7 +144,8 @@
                     <h3>ОПП, SOLID, GOF</h3>
                     <img src="resources/images/logos/oop.png" alt="Object-orientied programming icon">
                     <p class="text-justify">
-                        Пониманию принципы ООП и умею писать чистый и расширяемый код. Знаю базовые GOF-паттерны и умею их применять.
+                        Пониманию принципы ООП и умею писать чистый и расширяемый код. Знаю базовые GOF-паттерны и умею
+                        их применять.
                         Нравится разрабатывать архитектуру приложения не меньше, чем писать код.
                     </p>
                 </div>
@@ -177,7 +171,8 @@
                     <img src="resources/images/logos/spring.svg" alt="Spring Framework logo">
                     <p class="text-justify">
                         Использовал Spring Framework для создания REST-сервиса с регистрацией, авторизацией, отправкой
-                        почты с помощью JavaMail API, поддержкой сессий с помощью JsonWebToken, настраивал CORS-заголовки.
+                        почты с помощью JavaMail API, поддержкой сессий с помощью JsonWebToken, настраивал
+                        CORS-заголовки.
                     </p>
                 </div>
             </div>
@@ -193,11 +188,12 @@
                     <h3>Python</h3>
                     <img src="resources/images/logos/python.svg" alt="Python language logo">
                     <p class="text-justify">
-                        Писал скрипты для автоматизации тестирования на Python, взаимодействующие с batch-, shell-скриптами.
+                        Писал скрипты для автоматизации тестирования на Python, взаимодействующие с batch-,
+                        shell-скриптами.
                     </p>
                 </div>
                 <div class="col">
-                    
+
                 </div>
             </div>
         </div>
@@ -215,12 +211,13 @@
                     <h5>Университет ИТМО (2021 - н.в.)</h5>
                     <h6>Бакалавриат</h6>
                     <img src="resources/images/logos/itmo.png" alt="ITMO University logo" align="middle" width="120px">
-                    <p><a href="https://itmo.ru/ru/viewfaculty/7/fakultet_informacionnyh_tehnologiy_i_programmirovaniya.htm">
+                    <p><a
+                            href="https://itmo.ru/ru/viewfaculty/7/fakultet_informacionnyh_tehnologiy_i_programmirovaniya.htm">
                             Факультет информационных технологий и программирования
-                    </a></p>
+                        </a></p>
                     <p><a href="https://abit.itmo.ru/program/bachelor/software_engineering">
-                        Направление подготовки - 09.03.02 Программирование и интернет-технологии
-                    </a></p>
+                            Направление подготовки - 09.03.02 Программирование и интернет-технологии
+                        </a></p>
                 </div>
             </div>
         </div>
@@ -256,7 +253,8 @@
                         </p>
                         <p>
                             <img src="resources/images/logos/email.svg" alt="Email icon" width="24px" height="24px">
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">artem.rebrik@yandex.ru</a>
+                            <a
+                                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">artem.rebrik@yandex.ru</a>
                         </p>
                     </div>
                 </div>
@@ -264,8 +262,48 @@
         </section>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

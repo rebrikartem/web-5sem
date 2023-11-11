@@ -29,12 +29,17 @@ p {
     color: black;
 }
 
-.menu__item {
+.navbar-brand {
+    font-size: 20px;
+}
+
+#navbarSupportedContent li {
     margin: 0 10px;
 }
 
-.menu__item a {
+#navbarSupportedContent a {
     text-transform: uppercase;
+    font-size: 16px;
 }
 
 #navigation a {
