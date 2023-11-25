@@ -42,10 +42,14 @@ p {
     font-size: 16px;
 }
 
-#navigation a {
-    font-size: 22px;
-    font-weight: 700;
-    color: black;
+a:hover, a:focus {
+    box-shadow: 0 0 20px 2px #21332c;
+    outline: none; /*убирает рамку фокуса в chrome*/
+}
+
+.active {
+    background-color: white !important;
+    color: black !important;
 }
 
 .overview {
