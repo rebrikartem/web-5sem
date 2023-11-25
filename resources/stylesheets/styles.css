@@ -42,28 +42,22 @@ p {
     font-size: 16px;
 }
 
-a:hover, a:focus {
-    box-shadow: 0 0 20px 2px #21332c;
-    outline: none; /*убирает рамку фокуса в chrome*/
+nav .container ul li.active {
+    background-color: white;
 }
 
-.active {
-    background-color: white !important;
-    color: black !important;
-}
-
-.overview {
+#overview {
     padding-top: 200px;
     padding-bottom: 200px;
 }
 
-.overview p {
+#overview p {
     font-size: 22px;
     font-weight: 500;
     color: black;
 }
 
-.position {
+#position {
     font-size: 22px;
     color: black;
 
@@ -71,7 +65,7 @@ a:hover, a:focus {
     padding-bottom: 200px;
 }
 
-.experience {
+#experience {
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -98,10 +92,11 @@ a:hover, a:focus {
 }
 
 #languages {
-
-    padding-bottom: 50px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
 #contacts {
-    padding-bottom: 40px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
