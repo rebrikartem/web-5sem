@@ -1,12 +1,100 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Проекты</title>
+    <link rel="stylesheet" href="resources/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/stylesheets/todolist.css">
+    <script src="todolist.js" defer> </script>
     <script src="loadTimeTracker.js"></script>
 </head>
 <body>
-    <h1>Hello, world!</h1>
+    <div id="items"></div>
+    <template id="itemTemplate">
+        <div class="item">
+            <input type="checkbox" class="item-completed">
+            <input type="text" class="item-description" placeholder="To Do item...">
+        </div>
+    </template>
+    <button id="add">Add Item</button>
+
+    <div id="preloader">Loading...</div>
+    <div id="photo-container">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const preloader = document.getElementById('preloader');
+            const photoContainer = document.getElementById('photo-container');
+
+            function fetchData(url) {
+                return fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    });
+            }
+
+            function renderPhotos(photos) {
+                const photoHtml = photos.map(photo => `
+                    <div class="photo-card">
+                        <img src="${photo.url}" alt="${photo.title}" class="photo-img">
+                        <p>${photo.title}</p>
+                    </div>
+                `).join('');
+
+                photoContainer.innerHTML = photoHtml;
+            }
+
+            function handleError(error) {
+                photoContainer.innerHTML = '⚠ Something went wrong.';
+                console.error('Error:', error.message);
+            }
+
+            function getRandomElementsFromArray(array, count) {
+                const shuffledArray = array.slice();
+                let currentIndex = shuffledArray.length;
+
+                while (currentIndex !== 0) {
+                    const randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex--;
+
+                    const temporaryValue = shuffledArray[currentIndex];
+                    shuffledArray[currentIndex] = shuffledArray[randomIndex];
+                    shuffledArray[randomIndex] = temporaryValue;
+                }
+
+                return shuffledArray.slice(0, count);
+            }
+
+            function fetchDataAndRender(url) {
+                preloader.style.display = 'block';
+
+                fetchData(url)
+                    .then(photos => {
+                        renderPhotos(getRandomElementsFromArray(photos, 12));
+                    })
+                    .catch(error => {
+                        handleError(error);
+                    })
+                    .finally(() => {
+                        preloader.style.display = 'none';
+                    });
+            }
+
+            // Example URL from JSONPlaceholder: Fetching photos
+            const apiUrl = 'https://jsonplaceholder.typicode.com/photos';
+
+            // Fetch data and render on page load
+            fetchDataAndRender(apiUrl);
+        });
+    </script>
+</body>
+</html>
+
+
 </body>
 </html>
